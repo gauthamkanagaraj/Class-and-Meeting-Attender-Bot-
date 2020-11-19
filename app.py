@@ -83,17 +83,17 @@ while(classesJoined < numberOfClasses):
 			mic = WebDriverWait(driver, 30).until(
 				EC.presence_of_element_located((By.XPATH, "//*[contains(@aria-label, 'Turn off microphone (ctrl + d)')]"))
 				)
-			mic.click();
+			mic.click()
 
 			cam = WebDriverWait(driver, 30).until(
 				EC.presence_of_element_located((By.XPATH, "//*[contains(@aria-label, 'Turn off camera (ctrl + e)')]"))
 				)
-			cam.click();
+			cam.click()
 
 			join = WebDriverWait(driver, 30).until(
 				EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Ask to join')]"))
 				)
-			join.click();
+			join.click()
 		except:
 			print("Error in joining")
 
@@ -102,12 +102,12 @@ while(classesJoined < numberOfClasses):
 			hangUp = WebDriverWait(driver, 30).until(
 				EC.presence_of_element_located((By.XPATH, "//*[contains(@aria-label, 'Leave call')]"))
 				)
-			hangUp.click();
+			hangUp.click()
 
 			home = WebDriverWait(driver, 30).until(
 				EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Return to home screen')]"))
 				)
-			home.click();
+			home.click()
 
 			classesJoined += 1;
 			if(classesJoined == numberOfClasses):
